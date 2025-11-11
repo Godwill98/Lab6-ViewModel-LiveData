@@ -23,7 +23,7 @@
             android:background="?attr/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:title="Tenant Portal"
-            app:navigationIcon="@drawable/ic_tool"
+            app:navigationIcon="@drawable/ic_menu"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
