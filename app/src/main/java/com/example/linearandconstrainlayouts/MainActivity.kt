@@ -55,6 +55,8 @@ class MainActivity : AppCompatActivity() {
 
         // UI Elements
         val firstNameEditText = findViewById<EditText>(R.id.editTextFirstName)
+        val secondNameEditText = findViewById<EditText>(R.id.editTextText3)
+        val apartmentEditText = findViewById<EditText>(R.id.ApartmentNumber)
         val addTenantButton = findViewById<Button>(R.id.button9)
         val outputTextView = findViewById<TextView>(R.id.textView8)
         val openSecondActivity = findViewById<Button>(R.id.WelcomeScreen)
@@ -73,8 +75,12 @@ class MainActivity : AppCompatActivity() {
         // Welcome button opens SecondActivity
         openSecondActivity.setOnClickListener {
             val firstNameInput = firstNameEditText.text.toString()
+            val secondNameInput = secondNameEditText.text.toString()
+            val apartmentInput = apartmentEditText.text.toString()
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("TENANT_NAME", firstNameInput)
+            intent.putExtra("TENANT_SECOND_NAME", secondNameInput)
+            intent.putExtra("TENANT_APARTMENT", apartmentInput)
             startActivity(intent)
         }
     }
